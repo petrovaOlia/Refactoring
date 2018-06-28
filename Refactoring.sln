@@ -3,9 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27428.2005
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RefactoringPlugin", "RefactoringPlugin\RefactoringPlugin.csproj", "{10F69CE7-1928-488C-8871-5F182E7EF05F}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeAnalyzer", "CodeAnalyzer\CodeAnalyzer.csproj", "{DDAF7A5F-BFF9-4952-B9E5-E010F3CE3DCB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CodeAnalyzer", "CodeAnalyzer\CodeAnalyzer.csproj", "{DDAF7A5F-BFF9-4952-B9E5-E010F3CE3DCB}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeAnalyzerTest", "CodeAnalyzerTest\CodeAnalyzerTest.csproj", "{5A72E5AC-4702-4E98-B591-5A23A154C988}"
 EndProject
@@ -15,10 +13,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{10F69CE7-1928-488C-8871-5F182E7EF05F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{10F69CE7-1928-488C-8871-5F182E7EF05F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{10F69CE7-1928-488C-8871-5F182E7EF05F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{10F69CE7-1928-488C-8871-5F182E7EF05F}.Release|Any CPU.Build.0 = Release|Any CPU
 		{DDAF7A5F-BFF9-4952-B9E5-E010F3CE3DCB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{DDAF7A5F-BFF9-4952-B9E5-E010F3CE3DCB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DDAF7A5F-BFF9-4952-B9E5-E010F3CE3DCB}.Release|Any CPU.ActiveCfg = Release|Any CPU

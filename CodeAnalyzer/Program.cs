@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using Microsoft.CodeAnalysis;
@@ -15,7 +16,9 @@ namespace CodeAnalyzer
     {
         static void Main(string[] args)
         {
-            var workspace = MSBuildWorkspace.Create();
+            var text = File.ReadAllText("..//..//..//AutoComments.txt");
+            var textWithoutComments = CodeWorker.GetTextWithoutAutoComments(text);
+            File.WriteAllText("..//..//..//WithoutAutoComments.txt", textWithoutComments);
         }
     }
 }

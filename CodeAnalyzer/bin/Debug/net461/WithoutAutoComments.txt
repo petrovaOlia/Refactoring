@@ -1,0 +1,12 @@
+namespace HelloWorld
+{
+    
+    class MyClass
+    {
+        
+        public void A1()
+        {
+
+        }
+    }
+}

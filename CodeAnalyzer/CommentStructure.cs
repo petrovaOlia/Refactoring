@@ -22,7 +22,7 @@ namespace CodeAnalyzer
             AutoText = autoText;
             Text = text;
 
-            IsAuto = text == autoText;//.Contains(autoText);
+            IsAuto = text == autoText;
         }
 
         public SyntaxNode XmlElement;

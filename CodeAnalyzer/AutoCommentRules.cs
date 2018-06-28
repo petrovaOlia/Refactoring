@@ -62,9 +62,9 @@ namespace CodeAnalyzer
         /// <summary>
         /// Возвращает текст атвокомментария returns.
         /// </summary>
-        //public static string GenerateReturnAutoComment()
-        //{
-        //    return "The";
-        //}
+        public static string GenerateReturnAutoComment()
+        {
+            return " The ";
+        }
     }
 }

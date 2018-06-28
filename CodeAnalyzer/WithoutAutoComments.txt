@@ -1,0 +1,26 @@
+namespace HelloWorld
+{
+    
+    class MyClass
+    {
+        
+        public void A1()
+        {
+
+        }
+
+	/// <summary>
+        /// Comment.
+        /// </summary>
+        public void A2()
+        {
+
+        }
+
+	
+        public static object Transform(int objectIds, int document)
+        {
+
+        }
+    }
+}

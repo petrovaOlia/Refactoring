@@ -62,7 +62,7 @@ namespace CodeAnalyzer
                         Comments.Add(new CommentStructure(xmlElementList, typeXml, AutoCommentRules.GenerateStandartAutoComment(GetParameterName(xmlElementList.StartTag)), GetCommentText(xmlElementList)));
                         break;
                     case "returns":
-                        Comments.Add(new CommentStructure(xmlElementList, typeXml, string.Empty, GetCommentText(xmlElementList)));
+                        Comments.Add(new CommentStructure(xmlElementList, typeXml, AutoCommentRules.GenerateReturnAutoComment(), GetCommentText(xmlElementList)));
                         break;
                 }
             }

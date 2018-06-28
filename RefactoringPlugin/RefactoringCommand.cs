@@ -48,8 +48,8 @@ namespace RefactoringPlugin
             if (commandService != null)
             {
                 commandService.AddCommand(new MenuCommand(new EventHandler(DeleteDocumentComments), new CommandID(CommandSet, cmdDelDocComments)));
-                commandService.AddCommand(new MenuCommand(new EventHandler(SubItemCallback), new CommandID(CommandSet, cmdDelProjComments)));
-                commandService.AddCommand(new MenuCommand(new EventHandler(SubItemCallback), new CommandID(CommandSet, cmdDelSolutionComments)));
+                commandService.AddCommand(new MenuCommand(new EventHandler(DeleteProjectComments), new CommandID(CommandSet, cmdDelProjComments)));
+                commandService.AddCommand(new MenuCommand(new EventHandler(DeleteSolutionComments), new CommandID(CommandSet, cmdDelSolutionComments)));
             }
         }
 
@@ -66,6 +66,16 @@ namespace RefactoringPlugin
 
             if (editText != String.Empty)
                 startPoint.ReplaceText(endPoint, editText, 1);
+        }
+
+        private void DeleteProjectComments(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DeleteSolutionComments(object sender, EventArgs e)
+        {
+
         }
 
         /// <summary>

@@ -1,0 +1,41 @@
+namespace HelloWorld
+{
+    /// <summary>
+    /// The my class.
+    /// </summary>
+    class MyClass
+    {
+        /// <summary>
+        /// The a 1.
+        /// </summary>
+        public void A1()
+        {
+
+        }
+
+	/// <summary>
+        /// Comment.
+        /// </summary>
+        public void A2()
+        {
+
+        }
+
+	/// <summary>
+        /// The transform.
+        /// </summary>
+        /// <param name="objectIds">
+        /// The object ids.
+        /// </param>
+        /// <param name="document">
+        /// The document.
+        /// </param>
+	/// <returns>
+	/// The <see cref="object"/>.
+	/// </returns>
+        public static object Transform(int objectIds, int document)
+        {
+
+        }
+    }
+}
