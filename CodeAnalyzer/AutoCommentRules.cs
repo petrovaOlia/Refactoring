@@ -8,6 +8,10 @@ namespace CodeAnalyzer
 {
     public static class AutoCommentRules
     {
+        /// <summary>
+        /// Возвращает текст автокомментария.
+        /// </summary>
+        /// <param name="name"> Имя владельца комментария.</param>
         public static string GenerateAutoCommentText(string name)
         {
             var autoCommentText = $"{name[0]}";
@@ -44,10 +48,9 @@ namespace CodeAnalyzer
         /// Возвращает текст атвокомментария summary для свойства.
         /// </summary>
         /// <param name="name">Имя класса.</param>
-        public static string GeneratePropertyAutoComment(string name)//, bool isOnlyGet)
+        public static string GeneratePropertyAutoComment(string name)
         {
-            return $"ets the {GenerateAutoCommentText(name)}.";
-            //return isOnlyGet ? $"Gets the {GenerateAutoCommentText(name)}." : $"Gets or sets the {GenerateAutoCommentText(name)}.";
+            return $"Gets or sets the {GenerateAutoCommentText(name)}.";
         }
 
         /// <summary>

@@ -56,13 +56,13 @@ namespace CodeAnalyzer
                 switch (typeXml)
                 {
                     case "summary":
-                        Comments.Add(new CommentStructure(xmlElementList, typeXml, ownerName, GetCommentText(xmlElementList)));
+                        Comments.Add(new CommentStructure(xmlElementList, ownerName, GetCommentText(xmlElementList)));
                         break;
                     case "param":
-                        Comments.Add(new CommentStructure(xmlElementList, typeXml, AutoCommentRules.GenerateStandartAutoComment(GetParameterName(xmlElementList.StartTag)), GetCommentText(xmlElementList)));
+                        Comments.Add(new CommentStructure(xmlElementList, AutoCommentRules.GenerateStandartAutoComment(GetParameterName(xmlElementList.StartTag)), GetCommentText(xmlElementList)));
                         break;
                     case "returns":
-                        Comments.Add(new CommentStructure(xmlElementList, typeXml, AutoCommentRules.GenerateReturnAutoComment(), GetCommentText(xmlElementList)));
+                        Comments.Add(new CommentStructure(xmlElementList, AutoCommentRules.GenerateReturnAutoComment(), GetCommentText(xmlElementList)));
                         break;
                 }
             }

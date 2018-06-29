@@ -13,7 +13,7 @@ namespace HelloWorld
 
         }
 
-	/// <summary>
+		/// <summary>
         /// Comment.
         /// </summary>
         public void A2()
@@ -21,7 +21,7 @@ namespace HelloWorld
 
         }
 
-	/// <summary>
+		/// <summary>
         /// The transform.
         /// </summary>
         /// <param name="objectIds">
@@ -30,9 +30,9 @@ namespace HelloWorld
         /// <param name="document">
         /// The document.
         /// </param>
-	/// <returns>
-	/// The <see cref="object"/>.
-	/// </returns>
+		/// <returns>
+		/// The <see cref="object"/>.
+		/// </returns>
         public static object Transform(int objectIds, int document)
         {
 

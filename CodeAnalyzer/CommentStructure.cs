@@ -15,10 +15,9 @@ namespace CodeAnalyzer
             XmlElement = xmlElement;
         }
 
-        public CommentStructure(SyntaxNode xmlElement, string type, string autoText, string text)
+        public CommentStructure(SyntaxNode xmlElement, string autoText, string text)
         {
             XmlElement = xmlElement;
-            Type = type;
             AutoText = autoText;
             Text = text;
 
@@ -26,7 +25,6 @@ namespace CodeAnalyzer
         }
 
         public SyntaxNode XmlElement;
-        public string Type;
         public string Text;
         public string AutoText;
         public bool IsAuto;
