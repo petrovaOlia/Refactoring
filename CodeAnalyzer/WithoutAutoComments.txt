@@ -9,7 +9,7 @@ namespace HelloWorld
 
         }
 
-	/// <summary>
+		/// <summary>
         /// Comment.
         /// </summary>
         public void A2()
@@ -17,7 +17,7 @@ namespace HelloWorld
 
         }
 
-	
+		
         public static object Transform(int objectIds, int document)
         {
 

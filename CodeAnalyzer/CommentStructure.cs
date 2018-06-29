@@ -1,20 +1,32 @@
-﻿using Microsoft.CodeAnalysis;
-using Microsoft.CodeAnalysis.CSharp.Syntax;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace CodeAnalyzer
+﻿namespace CodeAnalyzer
 {
+    using Microsoft.CodeAnalysis;
+
+    /// <summary>
+    /// Структура комментария.
+    /// </summary>
     public class CommentStructure
     {
+        /// <summary>
+        /// Лист комментарий.
+        /// </summary>
+        public SyntaxNode XmlElement;
+
+        /// <summary>
+        /// Конструктор.
+        /// </summary>
+        /// <param name="xmlElement">Лист комментарий.</param>
         public CommentStructure(SyntaxNode xmlElement)
         {
             XmlElement = xmlElement;
         }
 
+        /// <summary>
+        /// Конструктор.
+        /// </summary>
+        /// <param name="xmlElement">Лист комментарий.</param>
+        /// <param name="autoText">Текст автокомментария.</param>
+        /// <param name="text">Текст комментария.</param>
         public CommentStructure(SyntaxNode xmlElement, string autoText, string text)
         {
             XmlElement = xmlElement;
@@ -24,11 +36,19 @@ namespace CodeAnalyzer
             IsAuto = text == autoText;
         }
 
-        public SyntaxNode XmlElement;
-        public string Text;
-        public string AutoText;
-        public bool IsAuto;
+        /// <summary>
+        /// Текст автокомментария.
+        /// </summary>
+        public string AutoText { get; set; }
 
+        /// <summary>
+        /// Комментарий автоматический?
+        /// </summary>
+        public bool IsAuto { get; set; }
 
+        /// <summary>
+        /// Текст комментария.
+        /// </summary>
+        public string Text { get; set; }
     }
 }

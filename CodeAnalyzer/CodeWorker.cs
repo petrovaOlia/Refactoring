@@ -1,16 +1,20 @@
-﻿using Microsoft.CodeAnalysis;
-using Microsoft.CodeAnalysis.CSharp;
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace CodeAnalyzer
+﻿namespace CodeAnalyzer
 {
+    using System.Collections.Generic;
+    using System.Linq;
+
+    using Microsoft.CodeAnalysis;
+    using Microsoft.CodeAnalysis.CSharp;
+
+    /// <summary>
+    /// Работник с кодом.
+    /// </summary>
     public static class CodeWorker
     {
+        /// <summary>
+        /// Возвращает текст кода без автокомментариев.
+        /// </summary>
+        /// <param name="text">Текст кода.</param>
         public static string GetTextWithoutAutoComments(string text)
         {
             var tree = CSharpSyntaxTree.ParseText(text);
@@ -21,13 +25,13 @@ namespace CodeAnalyzer
                 .OfType<SyntaxTrivia>()
                 .Where(x => x.IsKind(SyntaxKind.SingleLineDocumentationCommentTrivia));
 
-            List<SyntaxNode> nodesForDelete = new List<SyntaxNode>();
+            var nodesForDelete = new List<SyntaxNode>();
 
             foreach (var comment in commentsSyntaxTrivia)
             {
                 var analyzer = new AutoCommentAnalyzer(comment);
 
-                for (int i = 1; i < analyzer.Comments.Count; i++)
+                for (var i = 1; i < analyzer.Comments.Count; i++)
                 {
                     if (analyzer.Comments[i].XmlElement.Kind() is SyntaxKind.XmlText)
                         continue;
@@ -38,19 +42,10 @@ namespace CodeAnalyzer
                         nodesForDelete.Add(analyzer.Comments[i].XmlElement);
                     }
                 }
-
-                foreach (var commentForDelete in analyzer.Comments)
-                    if (commentForDelete.IsAuto)
-                    //root.RemoveNode(commentForDelete.XmlElement, SyntaxRemoveOptions.KeepNoTrivia);
-                    {
-                        nodesForDelete.Add(commentForDelete.XmlElement);
-                    }
             }
 
             if (nodesForDelete.Count == 0)
-                return String.Empty;
-
-            //File.WriteAllText(tree.FilePath, root.RemoveNodes(nodesForDelete.AsEnumerable(), SyntaxRemoveOptions.KeepNoTrivia).ToFullString());
+                return string.Empty;
 
             return root.RemoveNodes(nodesForDelete.AsEnumerable(), SyntaxRemoveOptions.KeepNoTrivia).ToFullString();
         }
